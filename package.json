@@ -1,0 +1,80 @@
+{
+  "name": "@maplat/proj",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.1.0",
+  "description": "A JavaScript library that project CRSes, Projections, World Files, Maplat, etc.",
+  "type": "module",
+  "main": "./dist/maplat_proj.cjs",
+  "module": "./dist/maplat_proj.js",
+  "browser": "./dist/maplat_proj.umd.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/maplat_proj.js",
+      "require": "./dist/maplat_proj.cjs",
+      "browser": "./dist/maplat_proj.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && cross-env BUILD_MODE=package vite build",
+    "deploy": "cp public/*.html ./ && tsc && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src types tests",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code4history/MaplatProj.git"
+  },
+  "author": "Code for History",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code4history/MaplatProj/issues"
+  },
+  "homepage": "https://github.com/code4history/MaplatProj/wiki",
+  "keywords": [
+    "projection",
+    "GIS",
+    "proj4",
+    "Maplat",
+    "MaplatProj"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/geojson": "^7946.0.15",
+    "@types/node": "^22.10.2",
+    "@types/proj4": "^2.5.5",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "@vitest/coverage-v8": "^2.1.8",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jest-matcher-deep-close-to": "^3.0.2",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.4.0",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@maplat/transform": "^0.1.5",
+    "ol": "^10.3.1",
+    "proj4": "^2.15.0"
+  }
+}
