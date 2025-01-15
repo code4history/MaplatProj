@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
-//import maplatProj4 from '../../src';
-import maplatProj4 from 'proj4';
+import maplatProj4 from '../../src';
 import { testPoints } from './data';
 
 maplatProj4.defs([

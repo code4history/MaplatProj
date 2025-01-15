@@ -22,5 +22,7 @@ function maplatProj4(...args: Proj4Args) {
 maplatProj4.defs = originalProj4.defs;
 maplatProj4.Proj = originalProj4.Proj;
 maplatProj4.transform = originalProj4.transform;
+maplatProj4.toPoint = originalProj4.toPoint;
+maplatProj4.WGS84 = originalProj4.WGS84;
 
 export default maplatProj4;
