@@ -1,6 +1,6 @@
 import proj4 from 'proj4';
 
-//declare function maplatProj4(fromProjection: string, toProjection?: string): proj4.Converter;
+declare function maplatProj4(fromProjection: string, toProjection?: string): proj4.Converter;
 declare function maplatProj4<T extends proj4.TemplateCoordinates>(
     toProjection: string,
     coordinates: T

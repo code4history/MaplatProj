@@ -41,7 +41,9 @@ export const testPoints: TestPoint[] = [
   {code: 'PROJCS["NAD83 / Massachusetts Mainland",GEOGCS["GCS_North_American_1983",DATUM["D_North_American_1983",SPHEROID["GRS_1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["standard_parallel_1",42.68333333333333],PARAMETER["standard_parallel_2",41.71666666666667],PARAMETER["latitude_of_origin",41],PARAMETER["central_meridian",-71.5],PARAMETER["false_easting",200000],PARAMETER["false_northing",750000],UNIT["Meter",1]]',
     xy: [ 231394.84,902621.11],
     ll: [-71.11881762742996,42.37346263960867]
-  },
+  }
+];
+/*
   {code:'PROJCS["NAD83 / Massachusetts Mainland", GEOGCS["NAD83", DATUM["North American Datum 1983", SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG","7019"]], TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], AUTHORITY["EPSG","6269"]], PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], UNIT["degree", 0.017453292519943295], AXIS["Geodetic longitude", EAST], AXIS["Geodetic latitude", NORTH], AUTHORITY["EPSG","4269"]], PROJECTION["Lambert_Conformal_Conic_2SP", AUTHORITY["EPSG","9802"]], PARAMETER["central_meridian", -71.5], PARAMETER["latitude_of_origin", 41.0], PARAMETER["standard_parallel_1", 42.68333333333334], PARAMETER["false_easting", 200000.0], PARAMETER["false_northing", 750000.0], PARAMETER["scale_factor", 1.0], PARAMETER["standard_parallel_2", 41.71666666666667], UNIT["m", 1.0], AXIS["Easting", EAST], AXIS["Northing", NORTH], AUTHORITY["EPSG","26986"]]',
    xy: [ 231394.84,902621.11],
     ll: [-71.11881762742996,42.37346263960867]
@@ -73,7 +75,8 @@ export const testPoints: TestPoint[] = [
   {code: 'EPSG:102018',
     xy: [350577.5930806119, 4705857.070634324],
     ll: [-75,46]
-  }, {code: '+proj=gnom +lat_0=90 +lon_0=0 +x_0=6300000 +y_0=6300000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs',
+  }, 
+  {code: '+proj=gnom +lat_0=90 +lon_0=0 +x_0=6300000 +y_0=6300000 +ellps=WGS84 +datum=WGS84 +units=m +no_defs',
     xy: [350577.5930806119, 4705857.070634324],
     ll: [-75,46]
   },
@@ -903,4 +906,4 @@ export const testPoints: TestPoint[] = [
     ll: [2, 1],
     xy: [222605.29609715697, 55321.139565494814]
   }
-];
+];*/

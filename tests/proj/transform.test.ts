@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import maplatProj4 from '../../src';
+import maplatProj4 from '@/.';
+import proj4 from 'proj4';
 import { testPoints } from './data';
 
 maplatProj4.defs([
@@ -8,6 +9,15 @@ maplatProj4.defs([
   ["testmerc2", "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +units=m +k=1.0 +nadgrids=@null +no_defs"]
 ]);
 maplatProj4.defs('esriOnline', 'PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0]]');
+
+console.log("####");
+console.log(proj4("EPSG:4326", "EPSG:102018", [135, 35]));
+console.log(maplatProj4("EPSG:4326", "EPSG:102018", [135, 35]));
+console.log(maplatProj4("EPSG:4326", "EPSG:102018").inverse(maplatProj4("EPSG:4326", "EPSG:102018", [135, 35])));
+
+const xy1 = [ 12740981.677472439, 12740981.677472437 ];
+console.log(maplatProj4("EPSG:102018", "EPSG:3857", xy1));
+console.log(maplatProj4("EPSG:102018", "EPSG:3857").inverse([ 15028131.257091932, 4163881.1440642932 ]));
 
 describe('Original proj4 test', {}, function() {
   describe('core', {}, function() {
